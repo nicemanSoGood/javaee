@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ithc.demo.Person" table="h_person">
+		<id name="id" column="id">
+			<!--  
+				主键生成策略
+				increment  先查询表中主键的最大值，然后 +1
+				
+			-->
+		
+			<generator class="native"/>
+		</id>
+		<version name="version"/>
+	
+		<property name="name" column="name" length="20"/>
+		<property name="age" column="age"/>
+	</class>
+	
+	
+</hibernate-mapping>
+

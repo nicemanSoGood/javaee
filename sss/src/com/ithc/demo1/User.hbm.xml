@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ithc.demo1.User" table="h_user">
+		<id name="id" column="id">
+			<!--  
+				uuid 会在数据库里面生成一个唯一标识符
+			-->
+		
+			<generator class="uuid"/>
+		</id>
+	
+		<property name="name" column="name" length="20"/>
+	
+	</class>
+	
+	
+	
+</hibernate-mapping>
+
